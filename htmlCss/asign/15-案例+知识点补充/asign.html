@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html,css作业-焦点图</title>
+    <style>
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+    
+        li {
+            list-style: none;
+        }
+    
+        .focus {
+            position: relative;
+            width: 1120px;
+            height: 500px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+    
+        .focus-pics {
+            position: absolute;
+            left: 0;
+            right: 0;
+            white-space: nowrap;
+        }
+    
+        .focus-pics li {
+            display: inline-block;
+        }
+    
+        .focus-pics img {
+            width: 1120px;
+            height: 500px;
+        }
+    
+        .focus-indexes {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 462px;
+            color: #FFF;
+            text-align: center;
+        }
+    
+        .focus-indexes li {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            font-size: 14px;
+            background: rgb(157, 157, 157);
+            border-radius: 50%;
+        }
+    
+        .focus-indexes .active {
+            background: rgb(254, 103, 0);
+        }
+    
+        .focus-btnL,
+        .focus-btnR {
+            position: absolute;
+            top: 226px;
+            width: 25px;
+            height: 52px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 52px;
+            background: rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+        }
+    
+        .focus-btnL {
+            left: 0;
+        }
+    
+        .focus-btnR {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="focus">
+        <ul class="focus-pics">
+            <li>
+                <a href="#">
+                    <img src="./images/1.jpg" alt="1.jpg">
+                </a>
+            </li><li>
+                <a href="#">
+                    <img src="./images/2.jpg" alt="2.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/3.jpg" alt="3.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/4.jpg" alt="4.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/5.jpg" alt="5.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/6.jpg" alt="6.jpg">
+                </a>
+            </li>
+        </ul>
+        <ul class="focus-indexes">
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+        <span class="focus-btnL">&lt;</span>
+        <span class="focus-btnR">&gt;</span>
+    </div>
+    <h3>问题</h3>
+    <h4>保持横轴不换行</h4>
+    <dl>
+        <dt>inline/inline-block,whitespace:nowrap</dt>
+        <dd>
+            <p>标签间空格造成间距,保持换行时怎么处理?</p>
+        </dd>
+        <dt>子float,父width</dt>
+        <dd>
+            <p>父width需要 根据子数量,width计算</p>
+        </dd>
+    </dl>
+    
+</body>
+</html>

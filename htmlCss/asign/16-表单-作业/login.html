@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>16-表单-作业</title>
+    <style>
+        h3,p{margin:0;}
+        a{text-decoration:none;}
+        .wrap{
+            position: relative;
+            width:1190px;
+            height:600px;
+            margin: 0 auto;
+            background:blue url(./images/1.png) center center no-repeat;
+        }
+        .login{
+            position: absolute;
+            top:90px;
+            right:110px;
+            width:300px;
+            height:366px;
+            padding:38px 25px 0;
+            background: #fff;
+        }
+        .login h3{
+            margin-bottom:24px;
+            font-size:16px;
+            font-weight: bold;
+            color:#333;
+        }
+        .login-scan{
+            position: absolute;
+            top:11px;
+            right:5px;
+            width:52px;
+            height:52px;
+        }
+        .login-scan-angle{
+            position: absolute;
+            left:0px;
+            top:0px;
+            width:0;
+            height:0;
+            border:26px solid #fff;
+            border-top-color:transparent;
+            border-right-color:transparent;
+        }
+        .login-scan-tip{
+            position: absolute;
+            right:100%;
+            top:-1px;
+            margin-right:1px;
+            border:1px solid #f3d995;
+            width:141px;
+            font-size:12px;
+            text-indent:25px;
+            line-height:26px;
+            color:#df9c1f;
+            background:#fefcee;
+        }
+        .login-scan-tip i{
+            position: absolute;
+            display: block;
+            top:0;
+            bottom:0;
+            left:100%;
+            width:8px;
+            height:8px;
+            margin:auto 0 auto -4px;
+            border-top:1px solid #f3d995;
+            border-right:1px solid #f3d995;
+            transform: rotate(45deg);
+            background: #fefcee;
+        }
+        .login-form-group{
+            position: relative;
+            margin-bottom:24px;
+        }
+        .login-form-btns{
+            margin-top:-4px;
+        }
+        .login-form-group input{
+            display:block;
+            box-sizing: border-box;
+            /* width 没自动撑开 */
+            width:100%;
+            height:42px;
+            border:1px solid #666;
+            font-size:14px;
+            line-height: 40px;
+            padding: 0 0 0 49px;
+        }
+        .login-form-group .ico{
+            position: absolute;
+            left:1px;
+            top:1px;
+            width:40px;
+            height:40px;
+            text-align: center;
+            line-height: 40px;
+            background: #ddd  no-repeat center center;
+            /* ?背景图片不显示:图片不是你想的尺寸 */
+        }
+        .login-form-group .ico img{
+            width:24px;
+            vertical-align: middle;
+        }
+        .login .btn-submit{
+            box-sizing: border-box;
+            display:block;
+            width:100%;
+            border:none;
+            border-radius: 3px;
+            font-size:15px;
+            font-weight:bold;
+            line-height:42px;
+            color:#fff;
+            text-align: center;
+            background:#ff0036;
+        }
+        .login-jumps{
+            margin-top:26px;
+            padding-right:16px;
+            text-align:right;
+            font-size:12px;
+            word-spacing: 10px;
+        }
+        .login-jumps a{
+            color:#6c6c6c;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="login">
+            <h3>密码登录</h3>
+            <div class="login-scan">
+                <img src="./images/erweima.png" alt="erweima" width="52">
+                <div class="login-scan-angle"></div>
+                <p class="login-scan-tip"><img src="./images/safe.png" alt="safe" width="12" style="background:#0f0;vertical-align:middle;">扫码登陆更安全<i></i></p>
+            </div>
+            <form action="https://taobao.com" method="post">
+                <div class="login-form-group">
+                    <i class="ico"><img src="./images/num.png" alt="num"></i>
+                    <input class="login-input-name" type="text" name="loginName" placeholder="会员名/邮箱/手机号" />
+                </div>
+                <div class="login-form-group">
+                    <i class="ico"><img src="./images/pwd.png" alt="pwd"></i>
+                    <input class="login-input-pwd" type="password" name="password" placeholder="密码" /> 
+                </div>
+                <!-- placeholder生效不:生效 -->
+                <div class="login-form-btns">
+                    <button class="btn-submit" type="submit">登&nbsp;录</button>
+                </div>
+            </form>
+            <div class="login-jumps">
+                <a href="/forgetPWD">忘记密码</a>
+                <a href="/forgetLoginName">忘记会员名</a>
+                <a href="/reg">免费注册</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
